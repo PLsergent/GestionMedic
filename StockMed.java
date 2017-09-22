@@ -42,9 +42,19 @@ public class StockMed {
         }
     }
     //calcul du cout du stock
-    public  double prixStock()
+    public double prixStock()
     {
         return qteStock*medic.getPrixEch();
+    }
+
+    public double getStock()
+    {
+      return qteStock;
+    }
+
+    public Medicament getMedic()
+    {
+      return medic;
     }
 
 }

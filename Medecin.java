@@ -48,7 +48,6 @@ public class Medecin{
       System.out.println("Adresse : "+adresse);
       System.out.println("telephone : "+telephone);
       System.out.println("specialite : "+specialite);
-      System.out.println("======================");
     }
 
     public void ajoutMedicament(Medicament m){
