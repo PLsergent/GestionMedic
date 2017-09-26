@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -37,6 +38,44 @@ public class GestionMedic2 {
             System.out.println(m.getNom());
           }
         }
+        System.out.println("=========");
+
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Entrez nom médicament : ");
+        String n = sc.nextLine();
+        System.out.println("Entrez une quantité : ");
+        Integer s= sc.nextInt();
+
+        for (StockMed st2 : lesStocks)
+        {
+          Medicament m2 = st2.getMedic();
+          if (m2.getNom().equals(n))
+            st2.ajoutStock(s);
+        }
+        Scanner scs = new Scanner (System.in);
+        System.out.println("Entrez nom de médecin : ");
+        String nomMe = scs.nextLine();
+        System.out.println("Entrez prénom médecin : ");
+        String preMe = scs.nextLine();
+        System.out.println("Entrez nom médicament : ");
+        n = sc.nextLine();
+
+        for(Medecin m:lesMedecins)
+        {
+          if (m.getNomM().equals(nomMe) && m.getPrenomM().equals(preMe))
+            if(m.rechercheMedicament(n))
+              System.out.println("Médicament distribué");
+            else
+              System.out.println("Médicament non distribué");
+        }
+
+        double totalStock=0;
+
+        for(StockMed st3 :lesStocks)
+        {
+          totalStock+=st3.prixStock();
+        }
+        System.out.println("Montant stock :"+totalStock);
 
 
     }

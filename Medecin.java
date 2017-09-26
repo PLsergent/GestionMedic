@@ -82,4 +82,13 @@ public class Medecin{
       }
       System.out.println(prix);
     }
+
+    public String getNomM()
+    {
+      return nom;
+    }
+    public String getPrenomM()
+    {
+      return prenom;
+    }
 }
