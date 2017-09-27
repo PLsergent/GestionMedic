@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package gestionMedic;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -75,7 +76,7 @@ public class GestionMedic2 {
         {
           totalStock+=st3.prixStock();
         }
-        System.out.println("Montant stock :"+totalStock);
+        System.out.println("Montant stock : "+totalStock);
 
 
     }

@@ -1,3 +1,4 @@
+package gestionMedic;
 public class Medicament {
     private String nom;
     private String effet;

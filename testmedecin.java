@@ -1,3 +1,4 @@
+package gestionMedic;
 public class testmedecin{
 
   public static void main (String[] args){

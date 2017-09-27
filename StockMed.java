@@ -1,3 +1,4 @@
+package gestionMedic;
 public class StockMed {
     private Medicament medic;
     private double qteStock;
