@@ -1,37 +1,41 @@
 package gestionMedic;
 import java.util.*;
-public class Medecin{
+public class Medecin extends Professionnel{
 
-    private String nom;
+    //private String nom;
     private String prenom;
-    private String adresse;
-    private String telephone;
+    //private String adresse;
+    //private String telephone;
     private String specialite;
-    private int nbMedic;
-    private ArrayList<Medicament> listeMedic;
+    //private int nbMedic;
+    //private ArrayList<Medicament> listeMedic;
 
-    public Medecin()
-    {
-      nom="";
+    public Medecin(){
+      super();
+      //initialisation attributs
+      //nom="";
       prenom="";
-      adresse="";
-      telephone="";
+      //adresse="";
+      //telephone="";
       specialite="";
-      nbMedic=0;
-      listeMedic= new ArrayList<Medicament>();
+      //nbMedic=0;
+      //listeMedic= new ArrayList<Medicament>();
+      //appel constructeur Professionnel
+      //pour initaliser les attributs hérités
     }
 
     public Medecin(String n, String p, String a, String t, String s){
-      nom=n;
+      super(n,a,t);
+      //nom=n;
       prenom=p;
-      adresse=a;
-      telephone=t;
+      //adresse=a;
+      //telephone=t;
       specialite=s;
-      nbMedic=0;
-      listeMedic= new ArrayList<Medicament>();
+      //nbMedic=0;
+      //listeMedic= new ArrayList<Medicament>();
     }
 
-    public Medecin(String n, String p, String a, String t, String s, ArrayList<Medicament> lm)
+    /*public Medecin(String n, String p, String a, String t, String s, ArrayList<Medicament> lm)
     {
       nom=n;
       prenom=p;
@@ -40,18 +44,22 @@ public class Medecin{
       specialite=s;
       listeMedic= lm;
       nbMedic=listeMedic.size();
-    }
+    }*/
 
     public void afficheMe()
     {
-      System.out.println(nom);
+      System.out.println(nomP);
       System.out.println(prenom);
-      System.out.println("Adresse : "+adresse);
-      System.out.println("telephone : "+telephone);
+      System.out.println("Adresse : "+adresseP);
+      System.out.println("telephone : "+telP);
       System.out.println("specialite : "+specialite);
     }
 
-    public void ajoutMedicament(Medicament m){
+    public String toString(){
+      return nomP+" "+prenom+" "+specialite+" "+adresseP+" "+telP;
+    }
+
+  /*  public void ajoutMedicament(Medicament m){
       listeMedic.add(m);
       nbMedic=nbMedic+1;
     }
@@ -87,7 +95,7 @@ public class Medecin{
     public String getNomM()
     {
       return nom;
-    }
+    }*/
     public String getPrenomM()
     {
       return prenom;
