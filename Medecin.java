@@ -1,5 +1,6 @@
 package gestionMedic;
 import java.util.*;
+
 public class Medecin extends Professionnel{
 
     //private String nom;
