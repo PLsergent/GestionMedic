@@ -1,4 +1,9 @@
 package gestionMedic;
+/**
+* Gestion médicament
+* @version 1.0
+* @author PLsergent
+*/
 public class Medicament {
     private String nom;
     private String effet;
@@ -14,7 +19,13 @@ public class Medicament {
         prixEch=0;
         prixVente=0;
     }
-
+/**
+  * @param n chaine de caractères : nom du médicament
+  * @param e chaine de caractères : effet du médicament
+  * @param p chaine de caractères : posologie
+  * @param pe réel : prix de l'échantillon
+  * @param pv réel : prix de vente
+  */
     public Medicament(String n, String e, String p, double pe, double pv)
     {
         nom=n;

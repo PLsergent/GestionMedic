@@ -9,7 +9,7 @@ public class Professionnel {
 
   public Professionnel(){
     nomP="";
-    adresseP="";
+    adresseP=""; 
     telP="";
     nbMedic=0;
     listeMedic= new ArrayList<Medicament>();

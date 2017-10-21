@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"gestionMedic","l":"Medicament"}]
