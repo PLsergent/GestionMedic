@@ -5,7 +5,7 @@ public class Professionnel {
   protected String nomP;
   protected String adresseP;
   protected String telP;
-  protected int nbMedic;
+  protected double nbMedic;
   protected ArrayList<Medicament> listeMedic;
 
   public Professionnel(){
@@ -35,6 +35,9 @@ public class Professionnel {
   public void ajoutMedicament(Medicament m){
     listeMedic.add(m);
     nbMedic=nbMedic+1;
+    ArrayList<Professionnel> listedesPro = m.getListePro();
+    listedesPro.add(this);
+    m.setListePro(listedesPro);
   }
 
   public void afficheMedic(){
@@ -71,5 +74,13 @@ public class Professionnel {
 
   public String toString(){
     return nomP+" "+adresseP+" "+telP;
+  }
+
+  public ArrayList<Medicament> getListeMedic(){
+    return listeMedic;
+  }
+  public void setListeMedic(ArrayList<Medicament> liste)
+  {
+    listeMedic=liste;
   }
 }

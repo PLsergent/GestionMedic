@@ -1,4 +1,5 @@
 package gestionMedic;
+import java.util.*;
 public class StockMed {
     private Medicament medic;
     private double qteStock;
@@ -20,6 +21,7 @@ public class StockMed {
         qteStock=st;
         seuil=se;
         qteCde=qc;
+        m.ajoutStock(this);
     }
 
     //affichage des informations du stock
@@ -34,8 +36,10 @@ public class StockMed {
         qteStock+=qte;
     }
     //suppression de médicaments du stock
-    public void supprimeStock(double qte)
+    public void supprimeStock(double qte)throws negatifException
     {
+        if (qteStock-qte<0){
+          throw new negatifException("Stock");}
         qteStock-=qte;
         if (qteStock<seuil)
         {
