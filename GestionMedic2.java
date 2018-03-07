@@ -6,6 +6,9 @@
 package gestionMedic;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JFrame;
+import java.awt.*;
+
 
 /**
  *
@@ -19,11 +22,17 @@ public class GestionMedic2 {
       ArrayList<Medecin> lesMedecins = remplitListeMedecin();
 
       //liste des stocks de médicament
-       ArrayList<StockMed> lesStocks = remplitListeStock();
+      ArrayList<StockMed> lesStocks = remplitListeStock();
 
-  }catch(Exception e){
-    System.out.println(e.getMessage());
-  }
+      JFrame fen1 = new JFrame();
+      fen1.setVisible(true);
+      fen1.setSize(400,100);
+      fen1.setLocationRelativeTo(null);
+      fen1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+      }catch(Exception e){
+          System.out.println(e.getMessage());
+      }
 }
   public static ArrayList<Medecin> remplitListeMedecin()
   {
@@ -34,7 +43,7 @@ public class GestionMedic2 {
       Medicament asp = new Medicament("Aspirine",2.8, 3.5);
       Medicament eff = new Medicament("Efferalgan",3.1, 3.7);
       Medicament ferv = new Medicament("Fervex",2, 2.5);
-      Medecin med1=new Medecin("Durand", "Charles",
+      Medecin med1 = new Medecin("Durand", "Charles",
               "10 cours Vitton 69006 Lyon","0475896251","généraliste");
       med1.ajoutMedicament(doli);
       med1.ajoutMedicament(strep);
